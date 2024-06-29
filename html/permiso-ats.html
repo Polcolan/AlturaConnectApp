@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AlturaConnectAPP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-sm mt-5">
+      <div
+        class="row bg-primary m-3 p-3 border border-primary-subtle border-5 rounded-4"
+      >
+        <div class="col-3 text-center text-white" onclick="window.history.back()" style="cursor: pointer;">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    fill="currentColor"
+    class="bi bi-arrow-left-square"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+    />
+  </svg>
+</div>
+
+        <div class="col-9 text-center text-white"><h5>SST-Permiso ATS</h5></div>
+      </div>
+    </div>
+
+    <div class="container accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            <h5>Descripcion de la Tarea</h5>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="accordion-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Ciudad</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="ciudadTrabajoAltura"
+                placeholder="Ciudad"
+              />
+            </div>
+            
+
+            <label class="form-label" for="documento"
+              >Nombre de la Obra:</label
+            >
+            <select
+              class="form-select form-label"
+              aria-label="Default select example"
+              id="nombreObraTrAl"
+            >
+              <option selected>Selecione una Obra</option>
+              <option value="Obra Nogal" class="form-control">Obra Nogal</option>
+              <option value="Obra Castelar" class="form-label">Obra Castelar</option>
+              <option value="Obra Meridiano" class="form-select">Obra Meridiano</option>
+              <option value="Obra Colina" class="form-control">
+                Obra Colina
+              </option>
+              <option value="Obra Bonaire" class="form-label">Obra Bonaire</option>
+              <option value="Obra Dorado Living" class="form-control">Obra Dorado Living</option>
+            </select>
+         
+            
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Direccion</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="direccionTrabajoAltura"
+                placeholder="Direccion"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Fecha de Inicio de Actividad</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="fechaInicioActividad"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Fecha de Culminacion de Actividad</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="fechaCulminacionActividad"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Descripcion y Precedimiento de la Tarea</label
+              >
+              <textarea
+                class="form-control"
+                id="descripcion-procedimiento-tarea"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            <h5>Equipos y Herramientas a Utilizar</h5>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <label class="form-label" for="documento"
+              >Tipo de Herramienta:</label
+            >
+            <select
+              class="form-select form-label"
+              aria-label="Default select example"
+              id="tipo-herramienta"
+            >
+              <option selected>Selecione una opcion</option>
+              <option value="manual" class="form-control">Manual</option>
+              <option value="electrica" class="form-label">Electrica</option>
+              <option value="neumatica" class="form-select">Neumatica</option>
+              <option value="hidraulica" class="form-control">
+                Hidraulica
+              </option>
+              <option value="mecanica" class="form-label">Mecanica</option>
+              <option value="Otros" class="form-control">Otros</option>
+            </select>
+
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Descripcion de la Herramienta a Utilizar</label
+            >
+            <textarea
+              class="form-control"
+              id="descripcionHerramientaAts"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThere"
+            aria-expanded="false"
+            aria-controls="flush-collapseThere"
+          >
+            <h5>Sistemas de Acceso e Ingenieria</h5>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThere"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="escSenAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Escalera Sencilla
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="escDobExtAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Escalera Doble Extendible
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="escTipTijAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Escalera Tipo Tijera
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="andModAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Andamio Modular
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="andColAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Andamio Colgante
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="elePerAts"
+              />
+              <label class="form-check-label" for="flexCheckIndeterminate">
+                Elevador Personal
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Otro / Cual</label
+              >
+              <textarea
+                class="form-control"
+                id="otroAts"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapsefour"
+              aria-expanded="false"
+              aria-controls="flush-collapsefour"
+            >
+              <h5>Analisis de Tarea</h5>
+            </button>
+          </h2>
+          <div
+            id="flush-collapsefour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="salEmerAts" 
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  >¿Existen, están despejadas y señalizadas las rutas, salidas
+                  de emergencia, planos de evacuación?</label
+                >
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="ruiTraAts"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  > ¿El ruido del lugar de trabajo es tolerable y se puede controlar?</label
+                >
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="iluminacionAts"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  > ¿La iluminación de lugar es aceptable ?</label
+                >
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="pelResAts"
+                />
+                <label class="form-check-label" for="flexSwitchCheckDefault"
+                  > ¿No Hay peligro de resbalar o tropezar alrededor del área de trabajo?</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapsefive"
+              aria-expanded="false"
+              aria-controls="flush-collapsefive"
+            >
+              <h5>Descripcion de la Actividad</h5>
+            </button>
+          </h2>
+          <div
+            id="flush-collapsefive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Pasos detallados de la actividad</label
+              >
+              <textarea
+                class="form-control"
+                id="pasDetActAts"
+                rows="3"
+              ></textarea>
+            </div><div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Peligros Existentes y Pontenciales</label
+              >
+              <textarea
+                class="form-control"
+                id="pelExiPotAts"
+                rows="3"
+              ></textarea>
+            </div><div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Consecuencias</label
+              >
+              <textarea
+                class="form-control"
+                id="conAts"
+                rows="3"
+              ></textarea>
+            </div><div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Controles Requeridos</label
+              >
+              <textarea
+                class="form-control"
+                id="contReqAts"
+                rows="3"
+              ></textarea>
+            </div>
+            </div>
+          </div>
+        </div>
+       <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseeich"
+            aria-expanded="false"
+            aria-controls="flush-collapseeich"
+          >
+            <h5>Aprobacion y Validacion del Permiso</h5>
+          </button>
+        </h2>
+        <div
+          id="flush-collapseeich"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div class="mb-1">
+              <label class="form-label" for="cargo">Firma Residente SST:</label><p class="text-primary" >Sube tu Firma en Drive y pega la url abajo</p>
+              <input
+                id="archivo-firma-digital-sst-ats"
+                name="archivo-pdf-firma-digital"
+                type="url"
+                class="form-control"
+                aria-label="file example"
+                 placeholder=" pegar aqui  direccion https://photos.app.goo.gl/K9CbZSt6HEgyMepe6"
+                required
+              />
+            </div>
+
+             <!-- codigo prueba firma Digital -->
+
+<div class="container-sm mt-5">
+      <label class="form-label" for="cargo">Firma Residente SST:</label>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <canvas id="signatureCanvas" width="300" height="200"></canvas>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-8 text-center">
+          <button id="clearButton" class="btn btn-primary mr-2">Limpiar</button>
+          <button id="saveButton" class="btn btn-primary">Guardar</button></div>
+
+          <!-- fin prueba firma digital -->
+
+
+            <div class="mb-1">
+              <label class="form-label" for="cargo">Registro Fotografico:</label><p class="text-primary" >Sube tu imagen en Drive y pega la url abajo</p>
+              <input
+                id="registro-fotografico-ats"
+                name="archivo-pdf-firma-digital"
+                type="url"
+                class="form-control"
+                aria-label="file example"
+                 placeholder=" pegar aqui  direccion https://photos.app.goo.gl/K9CbZSt6HEgyMepe6"
+                required
+              />
+            </div><div><label class="form-label" for="documento"
+              >Personal que Realizara la Actividad:</label
+            >
+            <select
+              class="form-select form-label"
+              aria-label="Default select example"
+              id="seleccion-personal-ats"
+            >
+              <option selected>Selecione el personal que realizara la actividad</option>
+              <option value="jonathan lopez" class="form-control">
+                Jonathan lopez
+              </option>
+              <option value="Juan Carlos Ramirez" class="form-label">
+                Juan Carlos Ramirez
+              </option>
+              <option value="Oscar Agudelo-" class="form-select">
+                Oscar Agudelo
+              </option>
+            </select></div><div><label class="form-label" for="documento"
+              >Personal que Autorizara la Actividad:</label
+            >
+            <select
+              class="form-select form-label"
+              aria-label="Default select example"
+              id="seleccion-autorizador-ats"
+            >
+              <option selected>Selecione el personal que Autorizara la actividad</option>
+              <option value="Luis Alberto" class="form-control">
+               Luis Albreto
+              </option>
+              <option value="jimmy gutierrez" class="form-label">
+                jimmy gutierrez
+              </option>
+              <option value="Alfredo Burbano-" class="form-select">
+                Alfredo Burnano
+              </option>
+            </select></div>
+            
+            <div class="container-sm mt-5">
+              <div
+                class="row m-3 p-3 border border-primary-subtle border-5 rounded-4 text-center"
+              >
+               <button type="button" class="btn btn-outline-primary" id="enviar-datos-ats" >enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-sm justify-content-end sticky bottom">
+      <br />
+      <div class="container text-center mt-3">
+        <div class="row row-cols-3">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              <a class="text-white" href="/index.html">Salir</a>
+            </button>
+            </button>
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              <a class="text-white" href="archivos-guardados.html">Historico</a>
+            </button>
+            </button>
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              <a class="text-white" href="cardTrabajadores.html">Trabajador</a>
+            </button>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row sticky-bottom m-3">
+      <div class="text-center">
+        <button type="button" class="btn btn-danger"><a class="text-white" href="tel:+573187388954">Emergencia</a></button>
+      </div>
+      <br /><br />
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- inicio de codigo firestore -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+
+    <!-- fin de codigo firestore -->
+    <script src="../js/permisoAts.js"></script>
+  </body>
+</html>

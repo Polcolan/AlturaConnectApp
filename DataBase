@@ -1,0 +1,2 @@
+felipelaiton0@gmail.com, correo que se comparte la base de datos como administracion
+Lamentablemente, la consola de Firebase no proporciona una opción directa para exportar todos los datos de Firestore a un archivo. Sin embargo, puedes utilizar la herramienta gcloud para exportar los datos.

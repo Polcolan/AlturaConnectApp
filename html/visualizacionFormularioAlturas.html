@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>AlturaConnectAPP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container-sm mt-5">
+      <div
+        class="row bg-primary m-3 p-3 border border-primary-subtle border-5 rounded-4 "
+      >
+        <div class="col-3 text-center text-white" onclick="window.history.back()" style="cursor: pointer;">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    fill="currentColor"
+    class="bi bi-arrow-left-square"
+    viewBox="0 0 16 16"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+    />
+  </svg>
+</div>
+        <div class="col-9 text-center text-white"><h5>Visualizacion Formulario Trabajo en Alturas</h5></div>
+      </div>
+    </div>
+
+    <!-- inicio visualizacion Formulario -->
+
+   <div class="container">
+      
+      <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Ciudad:</p>
+        <p class="bg-white d-inline " id="ciudadTA"></p></div>
+
+      <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Nombre de la obra</p>
+        <p class="bg-white d-inline " id="ubicacionObra"></p></div>
+
+        <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Direccion:</p>
+        <p class="bg-white d-inline " id="direccionTrabajoAltura"></p></div>
+
+      <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Fecha Inicio Actividad:</p>
+        <p class="bg-white d-inline " id="fechaInicioTA"></p></div>
+
+        <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Fecha Culminacion actividad</p>
+        <p class="bg-white d-inline " id="fechaCulminacionTA"></p></div>
+
+        <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Hora Inicio Actividad</p>
+        <p class="bg-white d-inline " id="horaInicioActividad"></p></div>
+        
+        <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> Hora de Culminacion de Actividad</p>
+        <p class="bg-white d-inline " id="horaCulminacionActividad"></p></div>
+
+        <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Altura de la Actividad</p>
+      <p class="bg-white d-inline " id="alturaActividad"></p></div>
+
+        <div class="mb-3">
+        <p class="rounded-2 d-inline mr-5 text-bg-info"> ¿Es una Actividad Rutinaria?</p>
+        <p class="bg-white d-inline " id="actividadRutinaria"></p></div>
+
+        <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Descripcion y procedimiento de la tarea</p>
+      <p class="bg-white d-inline " id="descripcionTarea"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Casco con barbuquejo de tres o cuatro puntos de fijación</p>
+      <p class="bg-white d-inline " id="cascoBurbuquejoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Gafas de seguridad</p>
+      <p class="bg-white d-inline " id="gafasSeguridadAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Protector respiratorio</p>
+      <p class="bg-white d-inline " id="protectorRespiratorioAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Protectores auditivos</p>
+      <p class="bg-white d-inline " id="protectoresAuditivosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Guantes de nitrilo de precisión</p>
+      <p class="bg-white d-inline " id="guantesNitriloAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Guantes de vaqueta</p>
+      <p class="bg-white d-inline " id="guantesVaquetaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Guantes de dieléctricos</p>
+      <p class="bg-white d-inline " id="guantesDielectricosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Botas de seguridad caña baja</p>
+      <p class="bg-white d-inline " id="botaSeguridadAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Traje u overol</p>
+      <p class="bg-white d-inline " id="trajeOverolAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Arnés de 4 argollas</p>
+      <p class="bg-white d-inline " id="arnes4ArgollasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Arnés de 5 argollas</p>
+      <p class="bg-white d-inline " id="arnes5ArgollasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Trabajos en alturas</p>
+      <p class="bg-white d-inline " id="trabajoAlturasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Trabajos en espacios confinados</p>
+      <p class="bg-white d-inline " id="espaciosConfinadosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Guantes de vaqueta</p>
+      <p class="bg-white d-inline " id="guantesVaquetaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Trabajos con energías peligrosas</p>
+      <p class="bg-white d-inline " id="energiasPeligrosasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Presencia de virus, bacterias u hongos</p>
+      <p class="bg-white d-inline " id="presenciaVirusAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Presencia de animales, insectos u otros vectores</p>
+      <p class="bg-white d-inline " id="presenciaAnimalesAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Iluminación deficiente</p>
+      <p class="bg-white d-inline " id="iluminacionDeficienteAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a ruido</p>
+      <p class="bg-white d-inline " id="exposicionRuidoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a altas temperaturas</p>
+      <p class="bg-white d-inline " id="altasTemperaturasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a bajas temperaturas</p>
+      <p class="bg-white d-inline " id="bajasTemperaturasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Caída de objetos</p>
+      <p class="bg-white d-inline " id="caidaObjetosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Caídas al mismo nivel</p>
+      <p class="bg-white d-inline " id="caidaMismoNivelAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Caídas de diferente nivel (menor a 2 metros)</p>
+      <p class="bg-white d-inline " id="caidaDiferenteNivelAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Colapsos estructurales</p>
+      <p class="bg-white d-inline " id="colapsoEstructuralAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Malas condición de orden y aseo</p>
+      <p class="bg-white d-inline " id="malOrdenAseoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Superficies irregulares o con desnivel</p>
+      <p class="bg-white d-inline " id="superficieIrregularAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Cercanía a redes eléctricas con posible arco eléctrico</p>
+      <p class="bg-white d-inline " id="cercaniaRedesElectricasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Posible arco eléctrico</p>
+      <p class="bg-white d-inline " id="arcoElectricoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Contacto con partes en movimiento</p>
+      <p class="bg-white d-inline " id="contactoPartesMovimientoAt"></p>
+    </div>
+
+    <!-- <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Manipulación de herramientas manuales</p>
+      <p class="bg-white d-inline " id="manipulacionHerramientasManualesAT"></p>
+    </div> -->
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Proyección de partículas (solidos o líquidos)</p>
+      <p class="bg-white d-inline " id="proyeccionParticulasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Contacto con sustancias químicas</p>
+      <p class="bg-white d-inline " id="contactoSustanciasQuimicasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Presencia de gases y vapores</p>
+      <p class="bg-white d-inline " id="PresenciaGasesVaporesAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a polvo y material particulado</p>
+      <p class="bg-white d-inline " id="exposicionPolvoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="d-inline mr-5 text-bg-info"> Manipulación manual de cargas</p>
+      <p class="bg-white d-inline " id="manipulacionManualCargasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Posturas inadecuadas o forzadas para realizar la tarea</p>
+      <p class="bg-white d-inline " id="posturasInadecuadasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Movimientos repetitivos</p>
+      <p class="bg-white d-inline " id="movimientosRepetitivosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a lluvia</p>
+      <p class="bg-white d-inline " id="exposicionLluviaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a vientos fuertes</p>
+      <p class="bg-white d-inline " id="exposicionVientosFuertesAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Exposición a derrumbes o deslizamientos de tierra o masa</p>
+      <p class="bg-white d-inline " id="exposicionDerrumbesDesliamientosAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Presencia de fuentes de ignición de fuego</p>
+      <p class="bg-white d-inline " id="presenciaFuegoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Derrames, fugas</p>
+      <p class="d-inline " id="derramesFugasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Riesgo de explosión</p>
+      <p class="bg-white d-inline " id="riesgoExplosionAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Línea de vida vertical fija</p>
+      <p class="bg-white d-inline " id="lineaVidaVerticalFijaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Línea de vida vertical portátil</p>
+      <p class="bg-white d-inline " id="lineaVidaVerticalPortatilAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Línea de vida horizontal portátil</p>
+      <p class="bg-white d-inline " id="lineaVidaHoriontalHorizontalAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Línea de vida horizontal fija</p>
+      <p class="bg-white d-inline " id="lineaVidaHoriontalFijaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Anclaje portátiles (Tie Off)</p>
+      <p class="bg-white d-inline " id="anclajePortatilAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Cintas de anclaje</p>
+      <p class="bg-white d-inline " id="cintaAnclajeAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Conectores de transito vertical</p>
+      <p class="bg-white d-inline " id="conectorTransitoVerticalAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Eslinga de restricción</p>
+      <p class="bg-white d-inline " id="eslingaRestriccionAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Eslinga de posicionamiento</p>
+      <p class="bg-white d-inline " id="eslingaPosicionamientoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Eslinga de detención de caídas</p>
+      <p class="bg-white d-inline " id="eslingaDetencionCaidasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Eslinga de detención de caídas sencilla</p>
+      <p class="bg-white d-inline " id="eslingaDetencionCaidasSencillaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Eslinga de detención de caídas con doble terminal (Y)</p>
+      <p class="bg-white d-inline " id="eslingaDetencionCaidasDobleAt"></p>
+    </div>
+
+    <!-- <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Delimitación del área</p>
+      <p class="bg-white d-inline " id="delimitacionAreaAT"></p>
+    </div> -->
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Barandas</p>
+      <p class="bg-white d-inline " id="barandasAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Señalización</p>
+      <p class="bg-white d-inline " id="señaliacionAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Línea de advertencia</p>
+      <p class="bg-white d-inline " id="lineaAdvertenciaAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Control acceso</p>
+      <p class="bg-white d-inline " id="controlAccesoAt"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Firma Residente SST</p>
+      <p class="bg-white d-inline " id="firmaResidenteSST"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Registro Fotográfico:</p>
+      <a href="#" id="registroFotrografico" class="bg-white d-inline" target="_blank">Ver Foto</a>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Personal que Realizara la Actividad</p>
+      <p class="bg-white d-inline " id="personalRealizaraActividad"></p>
+    </div>
+
+    <div class="mb-3">
+      <p class="rounded-2 d-inline mr-5 text-bg-info"> Personal que Autorizara la actividad</p>
+      <p class="bg-white d-inline " id="personalAutorizaraActividad"></p>
+    </div>
+
+
+
+
+      
+
+
+   
+    </div>
+
+<!-- fin visualizacion Formulario    -->
+
+    <div class="container-sm justify-content-end sticky bottom">
+      <br />
+      <div class="container text-center mt-3">
+        <div class="row row-cols-3">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+             <a class="text-white" href="../index.html">Salir</a>
+            </button>
+            </button>
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              <a class="text-white" href="archivos-guardados.html">Historico</a>
+            </button>
+            </button>
+          </div>
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="
+                --bs-btn-padding-y: 0.25rem;
+                --bs-btn-padding-x: 0.5rem;
+                --bs-btn-font-size: 0.75rem;
+              "
+            >
+              <a class="text-white" href="cardTrabajadores.html">Trabajador</a>
+            </button>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row sticky-bottom m-3">
+      <div class="text-center">
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-danger"><a class="text-white" href="tel:+573187388954">Emergencia</a></button>
+      </div>
+      <br /><br />
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- inicio de codigo firestore -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+
+    <!-- fin de codigo firestore -->
+
+    <script src="../js/visualizacionFormularioAlturas.js"></script>
+    
+  </body>
+</html>
